@@ -10,7 +10,8 @@ namespace Conway
 {
     public class GameofLife : Game
     {
-        private int GridSize; //The size of the grid
+        private int GridSize; //The size of the grid/ zoom level
+        public static int ChunkSize; //The size of one chunk
         public int CellScale; //How large the Cell's are
         private Texture2D CellTexure; //The texture Cell's render with
         public static List<Cell> AliveCells; //Buffer of all alive Cell's
@@ -32,10 +33,24 @@ namespace Conway
         //Cell isAlive( (int, int) position ) { return new Thread( () => isAliveThreaded( (1,1))); }
         
         Cell isAlive( (int, int) position) {
-            Cell cell = null;
-            for (int index = 0; index < AliveCells.Count; index++) {
-                if (AliveCells[index]._position == position) { cell = AliveCells[index]; break; }
-            } return cell;
+            Chunk[] chunks = new Chunk[9];
+            { //Add each grid to check
+                chunks[0] = (Chunk.GetChunk((position.Item1 - 1, position.Item2 - 1)));
+                chunks[1] = (Chunk.GetChunk((chunks[0].Position.Item1 + 0, chunks[0].Position.Item2 - 1)));
+                chunks[2] = (Chunk.GetChunk((chunks[0].Position.Item1 + 1, chunks[0].Position.Item2 - 1)));
+                chunks[3] = (Chunk.GetChunk((chunks[0].Position.Item1 - 1, chunks[0].Position.Item2 + 0)));
+                chunks[4] = (Chunk.GetChunk((chunks[0].Position.Item1 + 1, chunks[0].Position.Item2 + 0)));
+                chunks[5] = (Chunk.GetChunk((chunks[0].Position.Item1 - 1, chunks[0].Position.Item2 + 1)));
+                chunks[6] = (Chunk.GetChunk((chunks[0].Position.Item1 + 0, chunks[0].Position.Item2 + 1)));
+                chunks[7] = (Chunk.GetChunk((chunks[0].Position.Item1 + 1, chunks[0].Position.Item2 + 1)));
+            }
+            foreach (Chunk chunk in chunks)
+            {
+                List<Cell> cells = chunk.GetCells();
+                foreach (Cell cell in cells)
+                    { if (cell._position == position) return cell; }
+            }
+            return null;
         }
 
         //Return neighbors of a cell or empty array if none
@@ -90,6 +105,7 @@ namespace Conway
         {
             CellScale = 5;
             GridSize = 100;
+            ChunkSize = 20;
             AliveCells = new List<Cell>();
             SpawnBuffer = new List<Cell>();
             KillBuffer = new List<Cell>();

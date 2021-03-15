@@ -174,19 +174,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\stell\\.nuget\\packages\\": {}
+    "C:\\Users\\philip.bromander\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\stell\\Documents\\Code\\c#\\Conway\\Conway.csproj",
+      "projectUniqueName": "C:\\Users\\philip.bromander\\Documents\\Code\\C#\\Conways_Game_of_Life\\Conway.csproj",
       "projectName": "Conway",
-      "projectPath": "C:\\Users\\stell\\Documents\\Code\\c#\\Conway\\Conway.csproj",
-      "packagesPath": "C:\\Users\\stell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\stell\\Documents\\Code\\c#\\Conway\\obj\\",
+      "projectPath": "C:\\Users\\philip.bromander\\Documents\\Code\\C#\\Conways_Game_of_Life\\Conway.csproj",
+      "packagesPath": "C:\\Users\\philip.bromander\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\philip.bromander\\Documents\\Code\\C#\\Conways_Game_of_Life\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\stell\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\philip.bromander\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -196,7 +196,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -208,7 +207,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MonoGame.Content.Builder.Task": {
             "target": "Package",
@@ -234,7 +232,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
