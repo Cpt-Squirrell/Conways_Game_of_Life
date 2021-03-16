@@ -46,7 +46,7 @@ namespace Conway
             }
             foreach (Chunk chunk in chunks)
             {
-                List<Cell> cells = chunk.GetCells();
+                Cell[] cells = chunk.GetCells().ToArray();
                 foreach (Cell cell in cells)
                     { if (cell._position == position) return cell; }
             }
