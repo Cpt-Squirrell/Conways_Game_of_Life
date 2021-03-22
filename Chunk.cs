@@ -29,6 +29,12 @@ namespace Conway
                 { if (chunk.Position == _position) return chunk; }
             return new Chunk(position);
         }
+        public static Chunk GetChunk( (int X, int Y) position, bool isChunkTransform)
+        {
+            foreach (Chunk chunk in Chunks)
+                { if (chunk.Position == position) return chunk; }
+            return new Chunk(position);
+        }
 
         public void AddCell(Cell cell) { Cells.Add(cell); }
         public List<Cell> GetCells() { return Cells; }

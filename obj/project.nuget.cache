@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "uIWcOuFr0cZYi2gnWVJ82RYXqnV7cftSjZiIL8gN+v/TkT+UPmyxvWSu5WLHYkx9yBTVx6fDWdfqU7MVNipsfg==",
+  "dgSpecHash": "B2TTQKCBxwwPyRVWwK6hODYF65KPwrhoYtsodTVsI/BZFwRlZgip52uyDpTMHN145KsNR9/pIMblXD7u1/agWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\stell\\Documents\\Code\\c#\\Conway\\Conway.csproj",
+  "projectFilePath": "C:\\Users\\philip.bromander\\Documents\\Code\\C#\\Conways_Game_of_Life\\Conway.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\stell\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\stell\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+    "C:\\Users\\philip.bromander\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\philip.bromander\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
   ],
   "logs": []
 }

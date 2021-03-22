@@ -34,19 +34,24 @@ namespace Conway
         
         Cell isAlive( (int, int) position) {
             Chunk[] chunks = new Chunk[9];
+            List<Cell> cells;
             { //Add each grid to check
-                chunks[0] = (Chunk.GetChunk((position.Item1 - 1, position.Item2 - 1)));
-                chunks[1] = (Chunk.GetChunk((chunks[0].Position.Item1 + 0, chunks[0].Position.Item2 - 1)));
-                chunks[2] = (Chunk.GetChunk((chunks[0].Position.Item1 + 1, chunks[0].Position.Item2 - 1)));
-                chunks[3] = (Chunk.GetChunk((chunks[0].Position.Item1 - 1, chunks[0].Position.Item2 + 0)));
-                chunks[4] = (Chunk.GetChunk((chunks[0].Position.Item1 + 1, chunks[0].Position.Item2 + 0)));
-                chunks[5] = (Chunk.GetChunk((chunks[0].Position.Item1 - 1, chunks[0].Position.Item2 + 1)));
-                chunks[6] = (Chunk.GetChunk((chunks[0].Position.Item1 + 0, chunks[0].Position.Item2 + 1)));
-                chunks[7] = (Chunk.GetChunk((chunks[0].Position.Item1 + 1, chunks[0].Position.Item2 + 1)));
+                chunks[0] = (Chunk.GetChunk((position.Item1 - 0, position.Item2 - 0)));
+                chunks[1] = (Chunk.GetChunk((chunks[0].Position.Item1 + 0, chunks[0].Position.Item2 - 1), true));
+                chunks[2] = (Chunk.GetChunk((chunks[0].Position.Item1 + 1, chunks[0].Position.Item2 - 1), true));
+                chunks[3] = (Chunk.GetChunk((chunks[0].Position.Item1 - 1, chunks[0].Position.Item2 + 0), true));
+                chunks[4] = (Chunk.GetChunk((chunks[0].Position.Item1 + 1, chunks[0].Position.Item2 + 0), true));
+                chunks[5] = (Chunk.GetChunk((chunks[0].Position.Item1 - 1, chunks[0].Position.Item2 + 1), true));
+                chunks[6] = (Chunk.GetChunk((chunks[0].Position.Item1 + 0, chunks[0].Position.Item2 + 1), true));
+                chunks[7] = (Chunk.GetChunk((chunks[0].Position.Item1 + 1, chunks[0].Position.Item2 + 1), true));
+                chunks[8] = (Chunk.GetChunk((chunks[0].Position.Item1 - 1, chunks[0].Position.Item2 - 1), true));
             }
             foreach (Chunk chunk in chunks)
             {
-                Cell[] cells = chunk.GetCells().ToArray();
+                foreach (Cell cell in chunk.GetCells()) cells.Add(cell)
+                {
+
+                }
                 foreach (Cell cell in cells)
                     { if (cell._position == position) return cell; }
             }
